@@ -6,20 +6,17 @@
         <span class="cart-item--price has-text-info has-text-weight-bold">
           ${{ cartItem.price }} X {{ cartItem.quantity }}
         </span>
-        <span>
-          <button
-            class="fa fa-arrow-circle-up cart-item__modify"
-            @click="addCartItem(cartItem)"
-          >
-            Add
-          </button>
-          <button
-            class="fa fa-arrow-circle-down cart-item__modify"
-            @click="removeCartItem(cartItem)"
-          >
-            Remove
-          </button>
-        </span>
+        <div class="product-variant-quanlity flex">
+          <div class="previous">
+            <button @click="removeCartItem(cartItem)">-</button>
+          </div>
+          <div class="center">
+            <input type="number" :value="cartItem.quantity" />
+          </div>
+          <div class="next">
+            <button @click="addCartItem(cartItem)">+</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -47,3 +44,32 @@ export default {
   },
 };
 </script>
+<style>
+.product-variant-quanlity {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 2px;
+  width: 152px;
+}
+.product-variant-quanlity button {
+  width: 50px;
+  height: 32px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+}
+.product-variant-quanlity input {
+  width: 50px;
+  height: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  outline: none;
+  cursor: text;
+  text-align: center;
+  line-height: 65px;
+  border-top: none;
+  border-bottom: none;
+  -webkit-appearance: none;
+}
+</style>
