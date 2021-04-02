@@ -21,10 +21,10 @@ yarn lint
 ```
 
 ### Fake data 
-```
 go to /backend
 ```
 yarn
+```
 ```
 node server
 ```
