@@ -4,7 +4,7 @@
       <p class="is-inline">{{ cartItem.title }}</p>
       <div>
         <span class="cart-item--price has-text-info has-text-weight-bold">
-          ${{ cartItem.price }} X {{ cartItem.quantity }}
+          ${{ cartItem.price }}
         </span>
         <div class="product-variant-quanlity flex">
           <div class="previous">
@@ -16,12 +16,14 @@
           <div class="next">
             <button @click="addCartItem(cartItem)">+</button>
           </div>
+          <div>Checkout {{ cartTotalItem(cartItem) }}</div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import { computed } from "vue";
 import { useStore } from "vuex";
 export default {
   name: "CartListItem",
@@ -37,9 +39,11 @@ export default {
     const removeCartItem = (cartItem) => {
       store.dispatch("removeCartItem", cartItem);
     };
+    const cartTotalItem = computed(() => store.getters.cartTotalItem);
     return {
       addCartItem,
       removeCartItem,
+      cartTotalItem,
     };
   },
 };
@@ -71,5 +75,6 @@ export default {
   border-top: none;
   border-bottom: none;
   -webkit-appearance: none;
+  margin: 0;
 }
 </style>

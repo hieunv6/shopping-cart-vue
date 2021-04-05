@@ -1,19 +1,11 @@
 [
     {
-        "id": 5,
-        "title": "IPHONE 11 Pro",
+        "id": 1,
+        "title": "IPHONE X",
         "description": "Lorem ipsum dolor sit amet, consectetur  dignissimos suscipit voluptatibus distinctio, error nostrum expedita omnis ipsum sit inventore aliquam sunt quam quis!",
-        "price": 599.9,
+        "price": 199.9,
         "image_tag": "iphonex.png",
-        "quantity": 36
-    },
-    {
-        "id": 4,
-        "title": "IPHONE 11",
-        "description": "Lorem ipsum dolor sit amet, consectetur  dignissimos suscipit voluptatibus distinctio, error nostrum expedita omnis ipsum sit inventore aliquam sunt quam quis!",
-        "price": 499.9,
-        "image_tag": "iphonex.png",
-        "quantity": 9
+        "quantity": 34
     },
     {
         "id": 3,
@@ -21,7 +13,7 @@
         "description": "Lorem ipsum dolor sit amet, consectetur  dignissimos suscipit voluptatibus distinctio, error nostrum expedita omnis ipsum sit inventore aliquam sunt quam quis!",
         "price": 399.9,
         "image_tag": "iphonex.png",
-        "quantity": 2
+        "quantity": 1
     },
     {
         "id": 2,
@@ -29,14 +21,6 @@
         "description": "Lorem ipsum dolor sit amet, consectetur  dignissimos suscipit voluptatibus distinctio, error nostrum expedita omnis ipsum sit inventore aliquam sunt quam quis!",
         "price": 299.9,
         "image_tag": "iphonex.png",
-        "quantity": 2
-    },
-    {
-        "id": 1,
-        "title": "IPHONE X",
-        "description": "Lorem ipsum dolor sit amet, consectetur  dignissimos suscipit voluptatibus distinctio, error nostrum expedita omnis ipsum sit inventore aliquam sunt quam quis!",
-        "price": 199.9,
-        "image_tag": "iphonex.png",
-        "quantity": 2
+        "quantity": 1
     }
 ]

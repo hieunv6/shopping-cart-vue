@@ -21,8 +21,7 @@ const actions = {
     });
   },
   removeCartItem({ commit }, cartItem) {
-    console.log(cartItem);
-    axios.delete("/api/cart/delete", cartItem).then((response) => {
+    axios.post("/api/cart/delete", cartItem).then((response) => {
       commit("UPDATE_CART_ITEMS", response.data);
     });
   },
@@ -40,6 +39,9 @@ const getters = {
         return cartItem.quantity * cartItem.price + acc;
       }, 0)
       .toFixed(2);
+  },
+  cartTotalItem: () => (item) => {
+    return (item.quantity * item.price).toFixed(2);
   },
   cartQuantity: (state) => {
     return state.cartItems.reduce((acc, cartItem) => {
