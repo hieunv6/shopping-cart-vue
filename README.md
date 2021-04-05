@@ -20,5 +20,13 @@ yarn build
 yarn lint
 ```
 
+### Fake data 
+go to /backend
+```
+yarn
+```
+```
+node server
+```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
